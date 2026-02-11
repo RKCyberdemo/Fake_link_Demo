@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cyber Security Awareness Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ff7eb3, #ff758c);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            width: 320px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            color: #d63384;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #d63384;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #c2186a;
+        }
+
+        .warning {
+            font-size: 12px;
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>⚠️ Login Page (Training Demo)</h2>
+
+    <input type="text" id="username" placeholder="Enter Username">
+    <input type="password" id="password" placeholder="Enter Password">
+
+    <button onclick="fakeLogin()">Login</button>
+
+    <p class="warning">
+        This is a Cyber Security Awareness Demo.<br>
+        No data is stored.
+    </p>
+</div>
+
+<script>
+function fakeLogin() {
+    var user = document.getElementById("username").value;
+    var pass = document.getElementById("password").value;
+
+    if(user === "" || pass === "") {
+        alert("Please enter both fields.");
+    } else {
+        console.log("Captured Username:", user);
+        console.log("Captured Password:", pass);
+
+        alert("⚠️ Demo: In a real phishing attack, this data would be sent to an attacker's server.\n\nCheck the browser console (F12 → Console) to see how easily data can be accessed.");
+    }
+}
+</script>
+</body>
+</html>
